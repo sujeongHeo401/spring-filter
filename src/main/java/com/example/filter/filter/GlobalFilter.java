@@ -38,6 +38,8 @@ public class GlobalFilter implements Filter {
         String resContent = new String(httpServletResponse.getContentAsByteArray());
         int httpStatus = httpServletResponse.getStatus();
 
+        httpServletResponse.copyBodyToResponse();
+
         log.info("response status : {}, responseBoddy : {} ", httpStatus, resContent);
     }
 }
