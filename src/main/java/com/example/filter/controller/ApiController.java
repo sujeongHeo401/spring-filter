@@ -17,5 +17,6 @@ public class ApiController {
     @PostMapping("")
     public User user(@RequestBody User user){
         log.info("User : {}, {}", user, user);
+        return user;
     }
 }
